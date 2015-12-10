@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Fundamentals Part II</title>
+	<script type="text/javascript">
+		console.log("===== STANDALONE FUNCTIONS =====");
+		// 1a. Create a simple for loop that sums all the numbers between x and y. Have it console log the final sum.
+		console.log("===== 1a. sumAll() =====");
+			function sumAll(x,y) {
+				var sum = 0;
+				for(var i = x; i <= y; i++) {
+					sum+=i;
+				}
+				console.log(sum);
+			}
+			sumAll(1,500);
+		// 2a. Write a loop that will go through an array, find the minimum value, and then return it.
+		console.log("===== 2a. findMin() =====");
+			function findMin(arr) {
+				var min = arr[0];
+				for(index in arr) {
+					if(min > arr[index]) {
+						min = arr[index];
+					}
+				}
+				console.log(min);
+			}
+			x = [1, 5, 90, 25, -3, 0];
+			findMin(x);
+		// 3a. Write a loop that will go through an array, find the average of all of the values, and then return it.
+		console.log("===== 3a. findAvg() =====");
+			function findAvg(arr) {
+				var sum2 = 0;
+				for(index in arr) {
+					sum2+= arr[index];
+				}
+				var avg = sum2/arr.length;
+				console.log(avg);
+			}
+			x = [1, 5, 90, 25, -3, 0];
+			findAvg(x);
+		console.log("===== ANONYMOUS FUNCTIONS =====");
+		// 1b. Create a simple for loop that sums all the numbers between x and y. Have it console log the final sum.
+		console.log("===== 1b. sumAll() =====");
+			var sumAll = function(x,y) {
+				var sum = 0;
+				for(var i = x; i <= y; i++) {
+					sum+=i;
+				}
+				console.log(sum);
+			}
+			sumAll(1,500);
+		// 2b. Write a loop that will go through an array, find the minimum value, and then return it.
+		console.log("===== 2b. findMin() =====");
+			var findMin = function(arr) {
+				var min = arr[0];
+				for(index in arr) {
+					if(min > arr[index]) {
+						min = arr[index];
+					}
+				}
+				console.log(min);
+			}
+			x = [1, 5, 90, 25, -3, 0];
+			findMin(x);
+		// 3b. Write a loop that will go through an array, find the average of all of the values, and then return it.
+		console.log("===== 3b. findAvg() =====");
+			var findAvg = function(arr) {
+				var sum2 = 0;
+				for(index in arr) {
+					sum2+= arr[index];
+				}
+				var avg = sum2/arr.length;
+				console.log(avg);
+			}
+			x = [1, 5, 90, 25, -3, 0];
+			findAvg(x);
+		console.log("===== METHODS OF OBJECT =====");
+			var part1 = {
+			sumAll: function(x,y) {
+					var sum = 0;
+					for(var i = x; i <= y; i++) {
+						sum+=i;
+					}
+					console.log(sum);
+				},
+			findMin: function(arr) {
+					var min = arr[0];
+					for(index in arr) {
+						if(min > arr[index]) {
+							min = arr[index];
+						}
+					}
+					console.log(min);
+				},
+			findAvg: function(arr) {
+					var sum2 = 0;
+					for(index in arr) {
+						sum2+= arr[index];
+					}
+					var avg = sum2/arr.length;
+					console.log(avg);
+				}
+		};
+		// 1c. Create a simple for loop that sums all the numbers between x and y. Have it console log the final sum.
+		console.log("===== 1c. sumAll() =====");
+		part1.sumAll(1,500);
+		// 2c. Write a loop that will go through an array, find the minimum value, and then return it.
+		console.log("===== 2c. findMin() =====");
+		x = [1, 5, 90, 25, -3, 0];
+		part1.findMin(x);
+		// 3c. Write a loop that will go through an array, find the average of all of the values, and then return it
+		console.log("===== 3c. findAvg() =====");
+		part1.findAvg(x);
+
+		console.log("===== 'PERSON' OBJECT =====");
+		var person = {
+			name: 'Vanessa',
+			distance_traveled: 0,
+			say_name: function() {
+				console.log(person.name);
+			},
+			say_something: function(say) {
+				console.log(person.name + " says '" + say + "'");
+			},
+			walk: function() {
+				console.log(person.name + " is walking");
+				person.distance_traveled+=3;
+			},
+			run: function() {
+				console.log(person.name + " is running");
+				person.distance_traveled+=10;
+			},
+			crawl: function() {
+				console.log(person.name + " is crawling");
+				person.distance_traveled+=1;
+			}
+		};
+		person.say_name();
+		person.say_something('I am cool');
+		person.run();
+		person.walk();
+		person.crawl();
+		person.crawl();
+
+		console.log(person.distance_traveled);
+	</script>
+</head>
+<body>
+	<h1>Fundamental JavaScript Algorithms Part II</h1>
+		<p>Open Inspect Element and look at the Console to see the outputs for each of the functions.</p>
+		<p>You can also try invoking the functions with your own variables using the Console.</p>
+	<h3></h3>
+	<pre><code>
+	</code></pre>
+</body>
+</html>
